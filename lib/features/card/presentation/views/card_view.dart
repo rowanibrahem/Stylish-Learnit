@@ -1,3 +1,4 @@
+import 'package:ecommerce_learn_it/features/card/presentation/views/widgets/card_body.dart';
 import 'package:flutter/material.dart';
 
 class CardView extends StatelessWidget {
@@ -5,6 +6,9 @@ class CardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const SafeArea(
+        child:  Scaffold(
+      body: CardBody(),
+    ));
   }
 }

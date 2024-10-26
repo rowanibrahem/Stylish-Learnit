@@ -14,4 +14,9 @@ class AssetImages {
   static const lastPart = "assets/images/last part.png";
   static const vector = "assets/images/vector.png";
   static const google = "assets/images/google.png";
+  static const popUp = "assets/images/popup.png";
+  static const payPal = "assets/images/paypal.png";
+  static const apple = "assets/images/apple.png";
+  static const master = "assets/images/maestro.png";
+  static const visa = "assets/images/visa.png";
 }
