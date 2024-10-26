@@ -19,4 +19,5 @@ class AssetImages {
   static const apple = "assets/images/apple.png";
   static const master = "assets/images/maestro.png";
   static const visa = "assets/images/visa.png";
+  static const favourite = "assets/images/Favorite.png";
 }

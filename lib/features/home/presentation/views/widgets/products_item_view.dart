@@ -21,19 +21,19 @@ class _ProductsItemViewState extends State<ProductsItemView> {
     return BlocBuilder<ProductsCubit, ProductsState>(
       builder: (context, state) {
         if (state is ProductsSuccess){
-          final List<ProductsModel> filteredCourses =  state.products;
+          final List<ProductsModel> filteredProducts =  state.products;
          return SizedBox(
           height: 400,
            child: ListView.builder(
             scrollDirection: Axis.horizontal,
             physics: const BouncingScrollPhysics(),
             padding: EdgeInsets.zero,
-            itemCount: filteredCourses.length,
+            itemCount: filteredProducts.length,
             itemBuilder: (context, index) {
               return  Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
                 child: ProductsListViewItem(
-                   productsModel: filteredCourses[index],
+                   productsModel: filteredProducts[index],
                 ),
               );
             },

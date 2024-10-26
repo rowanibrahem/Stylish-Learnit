@@ -1,3 +1,4 @@
+import 'package:ecommerce_learn_it/features/favourites/presentation/views/widgets/fav_empty_body.dart';
 import 'package:flutter/material.dart';
 
 class FavouriteView extends StatelessWidget {
@@ -5,6 +6,9 @@ class FavouriteView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const SafeArea(
+        child:  Scaffold(
+      body: FavEmptyBody(),
+    ));
   }
 }

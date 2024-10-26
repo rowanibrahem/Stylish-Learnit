@@ -43,32 +43,33 @@ class ProductsListViewItem extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                   ),
                   const SizedBox(height: 8),
-                  // Price and Rating Row
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      
-                      Text(
-                        '₹499',
-                        style: Styles.textStyle16.copyWith(color: Colors.green),
-                      ),
-                      // Rating
-                      const Row(
-                        children: [
-                           Icon(Icons.star, color: Colors.amber, size: 16),
-                          Icon(Icons.star, color: Colors.amber, size: 16),
-                          Icon(Icons.star, color: Colors.amber, size: 16),
-                          Icon(Icons.star, color: Colors.amber, size: 16),
-                          Icon(Icons.star_half, color: Colors.amber, size: 16),
-                          SizedBox(width: 4),
-                          // Number of Reviews
-                          Text(
-                            '6,890',
-                            style:  TextStyle(fontSize: 14, color: Colors.grey),
-                          ),
-                        ],
-                      ),
-                    ],
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          '₹499',
+                          style: Styles.textStyle16.copyWith(color: Colors.green),
+                        ),
+                        
+                        const Row(
+                          children: [
+                             Icon(Icons.star, color: Colors.amber, size: 16),
+                            Icon(Icons.star, color: Colors.amber, size: 16),
+                            Icon(Icons.star, color: Colors.amber, size: 16),
+                            Icon(Icons.star, color: Colors.amber, size: 16),
+                            Icon(Icons.star_half, color: Colors.amber, size: 16),
+                            SizedBox(width: 4),
+                            // Number of Reviews
+                            Text(
+                              '6,890',
+                              style:  TextStyle(fontSize: 14, color: Colors.grey),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
