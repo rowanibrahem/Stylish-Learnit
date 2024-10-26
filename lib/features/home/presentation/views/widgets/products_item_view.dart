@@ -7,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProductsItemView extends StatefulWidget {
-  const ProductsItemView({super.key, this.selectedTag});
-  final String? selectedTag; 
+  const ProductsItemView({super.key, });
+  
   
 
   @override
@@ -21,23 +21,24 @@ class _ProductsItemViewState extends State<ProductsItemView> {
     return BlocBuilder<ProductsCubit, ProductsState>(
       builder: (context, state) {
         if (state is ProductsSuccess){
-          final List<ProductsModel> filteredCourses = widget.selectedTag != null
-              ? state.products.where((course) => course.tag == widget.selectedTag).toList()
-              : state.products;
-         return ListView.builder(
-          scrollDirection: Axis.horizontal,
-          physics: const NeverScrollableScrollPhysics(),
-          padding: EdgeInsets.zero,
-          itemCount: filteredCourses.length,
-          itemBuilder: (context, index) {
-            return  Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10),
-              child: ProductsListViewItem(
-                 productsModel: filteredCourses[index],
-              ),
-            );
-          },
-        );
+          final List<ProductsModel> filteredCourses =  state.products;
+         return SizedBox(
+          height: 400,
+           child: ListView.builder(
+            scrollDirection: Axis.horizontal,
+            physics: const BouncingScrollPhysics(),
+            padding: EdgeInsets.zero,
+            itemCount: filteredCourses.length,
+            itemBuilder: (context, index) {
+              return  Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10),
+                child: ProductsListViewItem(
+                   productsModel: filteredCourses[index],
+                ),
+              );
+            },
+                   ),
+         );
         }else if (state is ProductsFailure) {
           return CustomErrorWidget(errMessage: state.errMessage);
         } else {

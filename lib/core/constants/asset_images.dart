@@ -11,5 +11,7 @@ class AssetImages {
   static const womens = "assets/images/womens.png";
   static const test = "assets/images/unsplash_NoVnXXmDNi0.png";
   static const secondPart = "assets/images/secondphoto.png";
-  static const lastPart = " assets/images/last part.png";
+  static const lastPart = "assets/images/last part.png";
+  static const vector = "assets/images/vector.png";
+  static const google = "assets/images/google.png";
 }

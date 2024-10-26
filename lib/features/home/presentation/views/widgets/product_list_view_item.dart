@@ -1,4 +1,5 @@
 import 'package:ecommerce_learn_it/core/models/products.dart';
+import 'package:ecommerce_learn_it/core/themes/styles.dart';
 import 'package:ecommerce_learn_it/features/home/presentation/views/widgets/custom_product_image.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ class ProductsListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: double.infinity,
+      width: 200,
       margin: const EdgeInsets.all(8.0),
       child: Card(
         shape: RoundedRectangleBorder(
@@ -20,50 +21,39 @@ class ProductsListViewItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-        CustomProductsImage(productsModel: productsModel),
+        Expanded(child: CustomProductsImage(productsModel: productsModel)),
         Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Product Title
-                  const Text(
-                    'Black Winter...',
-                    // '${courseModel.numberOfLessons} Lessons',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                    ),
+                 
+                   Text(
+                    '${productsModel.title}',
+                    style: Styles.textStyle12.copyWith(color: Colors.black),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
                   const SizedBox(height: 4),
-                  // Product Description
-                  Text(
+                 
+                   Text(
                     'Autumn And Winter Casual cotton-padded jacket...',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey[600],
-                    ),
+                    style: Styles.textStyle12.copyWith(color: Colors.black),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
                   const SizedBox(height: 8),
                   // Price and Rating Row
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      // Price
+                      
                       Text(
                         '₹499',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                          color: Colors.green,
-                        ),
+                        style: Styles.textStyle16.copyWith(color: Colors.green),
                       ),
                       // Rating
-                      Row(
+                      const Row(
                         children: [
                            Icon(Icons.star, color: Colors.amber, size: 16),
                           Icon(Icons.star, color: Colors.amber, size: 16),

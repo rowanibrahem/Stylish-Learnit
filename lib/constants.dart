@@ -1,4 +1,4 @@
 String? token;
 String? name;
 
-const String baseUrl = 'https://068a-156-203-155-72.ngrok-free.app';
+const String baseUrl = 'https://c7de-156-203-246-85.ngrok-free.app';

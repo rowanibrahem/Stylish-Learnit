@@ -31,7 +31,7 @@ class CustomProductsImage extends StatelessWidget {
         );
       },
       child: AspectRatio(
-        aspectRatio: 2.2 / 2.5,
+        aspectRatio: 2.2 / 2.2,
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),

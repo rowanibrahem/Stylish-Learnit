@@ -1,6 +1,5 @@
 import 'package:ecommerce_learn_it/core/themes/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class CategoryItem extends StatelessWidget {
   final String icon;
@@ -17,10 +16,10 @@ class CategoryItem extends StatelessWidget {
           CircleAvatar(
             backgroundColor: Colors.grey[200],
             radius: 25,
-            child: SvgPicture.asset(
+            child: Image.asset(
               icon,
-              width: 10,
-              height: 10,
+              width: 50,
+              height: 50,
             ),
           ),
           const SizedBox(height: 4),

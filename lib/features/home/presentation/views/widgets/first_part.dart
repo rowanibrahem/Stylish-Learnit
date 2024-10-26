@@ -1,7 +1,5 @@
-import 'package:ecommerce_learn_it/core/constants/asset_icons.dart';
 import 'package:ecommerce_learn_it/core/constants/asset_images.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class FirstPart extends StatelessWidget {
   const FirstPart({super.key});
@@ -26,10 +24,10 @@ class FirstPart extends StatelessWidget {
                   backgroundColor: Colors.grey[200],
                   radius: 18,
                   child:  ClipOval(
-                    child: SvgPicture.asset(
-                      AssetIcons.avatar ,
-                      width: 36,
-                      height: 36,
+                    child: Image.asset(
+                      AssetImages.vector ,
+                      width: 40,
+                      height: 40,
                     ),
                     
                   ),
