@@ -11,6 +11,7 @@ class TitleProfile extends StatelessWidget {
       child: Text(
         title,
         style: Styles.textStyle18,
+        
       ),
     );
   }

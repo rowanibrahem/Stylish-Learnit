@@ -97,16 +97,11 @@ class _LoginBodyState extends State<LoginBody> {
                     onSuccess: () {
                       if (formKey.currentState!.validate()) {
                           try {
-                            //  final String email = emailController.text;
-                            //  final String password = passwordController.text;
-
-                            // Call the logIn method from LoginCubit
                             BlocProvider.of<LoginCubit>(context).LogIn(
                               email: emailController.text,
                               password: passwordController.text,
                             );
                           } catch (e) {
-                            // Handle authentication error
                             print('Authentication error: $e');
                           }
                         }

@@ -41,7 +41,6 @@ class CustomButton extends StatelessWidget {
             shape: RoundedRectangleBorder(
                borderRadius: borderRadius ?? BorderRadius.circular(4),
             ),
-            // minimumSize: Size(150, 50),
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -56,7 +55,7 @@ class CustomButton extends StatelessWidget {
               ),
               const SizedBox(width: 15),
               if (svgPicture != null) ...[
-                svgPicture!, // Render SVG only if it's provided // Add some spacing between SVG and text
+                svgPicture!, 
               ],
             ],
           ),

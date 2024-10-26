@@ -7,6 +7,7 @@ import 'package:ecommerce_learn_it/features/auth/presentation/view_model/sign_up
 import 'package:ecommerce_learn_it/features/auth/presentation/views/signup_view.dart';
 import 'package:ecommerce_learn_it/features/home/presentation/data/home_repo_impl.dart';
 import 'package:ecommerce_learn_it/features/home/presentation/view_model/products_cubit.dart';
+import 'package:ecommerce_learn_it/features/profile/presentation/views/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           textTheme: GoogleFonts.montserratTextTheme(),
         ),
-        home: const SignupView(),
+        home: const ProfileView(),
       ),
     );
   }

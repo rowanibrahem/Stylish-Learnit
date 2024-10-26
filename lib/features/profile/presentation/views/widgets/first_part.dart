@@ -13,6 +13,7 @@ class FirstPart extends StatelessWidget {
           'CheckOut',
           style: Styles.textStyle18,
           ),
+          const SizedBox(height: 20,),
            const CircleAvatar(
                 radius: 40,
                 backgroundImage:  AssetImage(
