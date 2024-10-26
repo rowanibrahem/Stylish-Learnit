@@ -6,8 +6,7 @@ class ApiService{
   ApiService(this.dio);
  
 
-  final _baseUrl = 'https://c7de-156-203-246-85.ngrok-free.app/api/';
-  // final _baseUrl = 'http://10.1.1.1:45386/api';
+  final _baseUrl = 'https://8183-197-43-22-244.ngrok-free.app/api/';
   final Dio dio;
 
   Future<Response> post (

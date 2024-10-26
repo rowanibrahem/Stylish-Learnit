@@ -25,8 +25,8 @@ class CustomProductsImage extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.of(context).push(
-          MaterialPageRoute(builder: (context) => const ShopPageView(),
-          // CourseView(courseModel: courseModel),
+          MaterialPageRoute(builder: (context) => ShopPageView(productsModel: productsModel,),
+         
           ),
         );
       },

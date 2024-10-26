@@ -35,4 +35,6 @@ static TextStyle textStyle18 = const TextStyle(
     fontWeight: FontWeight.w400, //regular
     color: ColorsApp.primaryColor,
   );
+
+  
 }

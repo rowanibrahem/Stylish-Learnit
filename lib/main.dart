@@ -4,10 +4,10 @@ import 'package:ecommerce_learn_it/core/functions/service_locator.dart';
 import 'package:ecommerce_learn_it/core/nertwork/cacheNetwork.dart';
 import 'package:ecommerce_learn_it/features/auth/presentation/view_model/login/log_in_cubit.dart';
 import 'package:ecommerce_learn_it/features/auth/presentation/view_model/sign_up/sign_up_cubit.dart';
-import 'package:ecommerce_learn_it/features/auth/presentation/views/signup_view.dart';
+import 'package:ecommerce_learn_it/features/auth/presentation/views/login_view.dart';
 import 'package:ecommerce_learn_it/features/home/presentation/data/home_repo_impl.dart';
 import 'package:ecommerce_learn_it/features/home/presentation/view_model/products_cubit.dart';
-import 'package:ecommerce_learn_it/features/profile/presentation/views/profile_view.dart';
+import 'package:ecommerce_learn_it/features/shop/presentation/view_model/products_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -44,6 +44,11 @@ class MyApp extends StatelessWidget {
             getIt.get<HomeRepoImpl>(),
           )..fetchCourses(),
         ),
+        BlocProvider(
+          create: (context) => ProductsDetailsCubit(
+            getIt.get<HomeRepoImpl>(),
+          ),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -52,7 +57,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
           textTheme: GoogleFonts.montserratTextTheme(),
         ),
-        home: const ProfileView(),
+        home: const LoginView(),
       ),
     );
   }
